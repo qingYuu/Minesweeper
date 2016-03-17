@@ -19,7 +19,7 @@ void setup ()
     // make the manager
     Interactive.make( this );
 
-    image(k, 0, 0,700,700);
+   
     //your code to declare and initialize buttons goes here
     buttons = new MSButton[NUM_ROWS][NUM_COLS];
     for(int row = 0; row< NUM_ROWS; row++){
@@ -45,7 +45,7 @@ public void setBombs()
 
 public void draw ()
 {
-   
+    image(k, 0, 0,700,700);
     if(isWon())
         displayWinningMessage();
 }
