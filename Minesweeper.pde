@@ -22,10 +22,11 @@ void setup ()
     image(k, 0, 0,700,700);
     //your code to declare and initialize buttons goes here
     buttons = new MSButton[NUM_ROWS][NUM_COLS];
-    for(int row = 0; row< NUM_ROWS; row++)
-        for(int col = 0; col< NUM_COLS; col++)
-            buttons[row][col] = new MSButton(row,col);    
-    
+    for(int row = 0; row< NUM_ROWS; row++){
+        for(int col = 0; col< NUM_COLS; col++){
+            buttons[row][col] = new MSButton(row,col);
+    }
+    }
     setBombs();
 }
 public void setBombs()
@@ -38,7 +39,6 @@ public void setBombs()
        if(!bombs.contains(buttons[r][c]))
        {
          bombs.add(buttons[r][c]);
-         System.out.println(r + ", " + c);
        }
    }
 }
